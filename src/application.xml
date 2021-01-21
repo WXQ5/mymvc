@@ -1,0 +1,5 @@
+<beans>
+    <bean path="/demo" class="bean.DemoBean"></bean>
+    <bean path="/emp" class="bean.EmpBean"></bean>
+    <bean path="/dept" class="bean.DeptBean"></bean>
+</beans>

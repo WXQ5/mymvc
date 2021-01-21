@@ -1,0 +1,15 @@
+<sqls name="emp">
+    <sql id="searchAllByPage">
+        SELECT empno,ename,job,IFNULL(mgr,"") AS mgr,hiredate,sal,IFNULL(comm,0) AS comm,deptno
+        FROM emp
+        WHERE 1=1 #condition#
+        LIMIT ?,?;
+    </sql>
+    <sql id="searchCount">
+        SELECT COUNT(*) AS ct FROM emp
+    </sql>
+    <sql id="deleteByEmpno">
+        DELETE FROM emp WHERE empno IN
+    </sql>
+    <sql id=""></sql>
+</sqls>

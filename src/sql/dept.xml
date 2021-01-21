@@ -1,0 +1,5 @@
+<sqls name="dept">
+    <sql id="searchAll">
+        SELECT deptno,dname FROM dept;
+    </sql>
+</sqls>

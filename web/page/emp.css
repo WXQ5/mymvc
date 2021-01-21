@@ -1,0 +1,71 @@
+#emp{
+    border: solid 1px #ccc;
+    border-collapse: collapse;
+}
+#emp th{
+    font-size: 15px;
+    color: #333;
+    height: 30px;
+    padding: 0 20px;
+    background-color: #e0e0e0;
+    border: solid 1px #ccc;
+    font-family: "微软雅黑";
+}
+#emp td{
+    font-size: 15px;
+    color: #333;
+    height: 30px;
+    padding: 0 20px;
+    text-align: center;
+    border: solid 1px #ccc;
+    font-family: "微软雅黑";
+}
+.operate{
+    margin: 20px 0;
+
+}
+.pageBtn,.optBtn{
+    width: 80px;
+    font-size: 15px;
+    background-color: #006BFF;
+    color: #fff;
+    margin-right: 15px;
+    height: 28px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+.pageBtn:active,.optBtn:active{
+    background-color: #0055CD;
+}
+.page{
+    height: 28px;
+    padding: 0 15px;
+    font-size: 15px;
+    color: #333;
+    font-family: "微软雅黑";
+    text-align: center;
+    width: 30px;
+    border: solid #e0e0e0 1px;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+.page-desc{
+    font-size: 15px;
+    color: #333;
+    font-family: "微软雅黑";
+    margin-left: 10px;
+    margin-right: 30px;
+}
+.active{
+    background-color: #E5D8F2;
+}
+.input{
+    width: 100px;
+    height: 30px;
+    padding:  10px;
+    font-size: 15px;
+    color: #333;
+    border: solid 1px #999;
+    border-radius: 3px;
+}

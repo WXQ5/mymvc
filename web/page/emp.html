@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>手写MVC框架前端页面</title>
+    <link rel="stylesheet" href="emp.css">
+</head>
+<body>
+<div id="example">
+    <div class="operate">
+        <input type="text" class="input" v-model="empno" placeholder="编号">
+        <input type="text" class="input" v-model="ename" placeholder="姓名">
+        <select v-model="deptno" class="dept">
+            <option value="">--部门--</option>
+            <option v-for="one in deptList" :value="one.deptno" :key="one.deptno">{{one.dname}}</option>
+        </select>
+        <input type="button" value="查询" class="optBtn" @click="search()">
+        <input type="button" value="添加" class="optBtn">
+        <input type="button" value="删除" class="optBtn" @click="deleteEmp()">
+    </div>
+
+    <table id="emp">
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>职位</th>
+            <th>上司</th>
+            <th>入职日期</th>
+            <th>底薪</th>
+            <th>奖金</th>
+            <th>部门</th>
+        </tr>
+        <tr v-for="one in list" @click="select($event,one.empno)" :key="one.empno">
+            <td>{{one.empno}}</td>
+            <td>{{one.ename}}</td>
+            <td>{{one.job}}</td>
+            <td>{{one.mgr}}</td>
+            <td>{{one.hiredate}}</td>
+            <td>{{one.job}}</td>
+            <td>{{one.comm}}</td>
+            <td>{{one.deptno}}</td>
+        </tr>
+    </table>
+
+    <div class="operate">
+        <input type="button" value="首页"  class="pageBtn"  @click="first()">
+        <input type="button" value="上一页"  class="pageBtn"  @click="prev()">
+        <input type="button" value="下一页"  class="pageBtn"  @click="next()">
+        <input type="button" value="尾页" class="pageBtn"   @click="last()">
+        <input type="text" v-model="page" class="page" @keydown="enter($event)"><span class="page-desc">/ {{pageNums}}</span>
+        <input type="button" value="跳转" @click="go()">
+    </div>
+</div>
+
+<!--<script src="jquery.js"></script>-->
+<!--渲染页面数据 vue比JQuery好   但是写轮播图这些JQuery更好-->
+<script src="vue.js"></script>
+<script src="axios.min.js"></script>
+<script src="emp.js"></script>
+</body>
+</html>
