@@ -90,7 +90,6 @@ public class GodFilter implements Filter {
         resp.setHeader("Access-Control-Allow-Origin", "*");
         resp.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
 
-
         String uri = req.getRequestURI();
         uri = uri.replace("/mymvc", "");
         if (uri.indexOf("/page/") != -1) {
